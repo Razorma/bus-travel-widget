@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+</head>
+<body>
+   <div class="main">
+        <h1 class="center"><i class="bi bi-bus-front"></i> Bus Travel Widget</h1>
+        <section class="inputSection">
+            <div class="inputRow">
+              <label for="points">Points:</label>
+              <input type="number" id="points" class="points">
+            </div>
+            <div class="inputRow">
+              <label for="Location">Start Location:</label>
+              <select id="Location" name="Location" class="selectLocation" >
+                <option value="" data-name="colors">Select Location</option>
+                <option value="40" data-name="Khayelitsha">Khayelitsha</option>
+                <option value="25" data-name="Dunoon">Dunoon</option>
+                <option value="30" data-name="MitchellsPlain">Mitchells Plain</option>
+              </select>
+            </div>
+        </section>
+        <section class="inputSection">
+            <h2 class="center"><i class="bi bi-bus-front"></i> Travel Times</h2>
+            <div class="travelTimes">
+                <div class="peakTimeRow">
+                    <input
+                        type="radio"
+                        name="peakTime"
+                        class="peak"
+                        value="peak"
+                        id="peak"
+                    />
+                    <label for="peak">Peak</label>
+                </div>
+                <div class="peakTimeRow">
+                    <input
+                        type="checkbox"
+                        name="return"
+                        class="return"
+                        value="return"
+                        id="return"
+                    />
+                    <label for="return">Return Trip</label>
+                </div>
+                <div class="peakTimeRow">
+                    <input
+                        type="radio"
+                        name="peakTime"
+                        class="offPeak"
+                        value="offPeak"
+                        id="offPeak"
+                    />
+                    <label for="offPeak">Off Peak</label>
+                </div>
+            </div>
+            <button type="calculate" class="calculate">Calculate</button>
+        </section>
+        <section class="OutputSection">
+            <h2 class="center"><i class="bi bi-calculator"></i> Calculations</h2>
+            <div class="inputRow">
+              <label for="singleTrips">Number of single trips:</label>
+              <div class="answer" id="singleTrips"></div>
+            </div>
+            <div class="inputRow">
+              <label for="pricePerTrip">Price per trip(single)</label>
+              <div class="answer" id="pricePerTrip"></div>
+            </div>
+            <div class="inputRow">
+              <label for="returnTrips">Number of return Trips:</label>
+              <div class="answer" id="returnTrips"></div>
+            </div>
+            <div class="inputRow">
+              <label for="returnTripsPrice">Price per trip(Return):</label>
+              <div class="answer" id="returnTripsPrice"></div>
+            </div>
+          </section>
+   </div> 
+</body>
+<script src="bus-travel-widget.js" charset="utf-8"></script>
+<script src="DOM/bus-travel-widget-dom.js" charset="utf-8"></script>
+</html>

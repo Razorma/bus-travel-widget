@@ -1,0 +1,108 @@
+*{
+    padding:0px;
+    margin:0px;
+    box-sizing: border-box;
+}
+h1{
+    padding-top: 20px;
+    margin-bottom: 20px;
+}
+body{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    /* flex-direction: column; */
+    align-items: center;
+    justify-content: center;
+}
+.main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* outline: 1px solid red; */
+    /* height: 100vh;*/
+    width: 98%; 
+    background-color: rgb(138, 112, 199);
+    
+}
+@media(min-width:768px){
+    .main{
+        width: 50%;  
+    }
+}
+.inputSection {
+    display: flex;
+    flex-direction: column;
+    
+    width: 90%;
+}
+input{
+    height: 30px;   
+}  
+.inputRow {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 10px 10px 10px 10px;
+}
+.center {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+.travelTimes{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.peakTimeRow{
+    display: flex;
+    align-items: center;
+    /* justify-content: space-around; */
+    gap: 50px;
+    margin: 10px 10px 10px 10px;
+    max-width: 230px;
+}
+.peak,
+.return,
+.offPeak{
+    height: 30px;
+    width: 30px;
+}
+/* .offPeak{
+    margin-left: 8px;
+} */
+h2{
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+.calculate{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 150px;
+    padding: 10px 20px;
+    background-color: rgb(36, 0, 121);
+    border-radius: 5px;
+}
+.answer{
+    background-color: aliceblue;
+    height: 30px;
+    width: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.OutputSection{
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+    /* align-items: center;
+    justify-content: center; */
+}
+.selectLocation{
+    min-width: 173px;
+    min-height: 35px;
+}
