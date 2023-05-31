@@ -13,6 +13,7 @@ let tripsFunction = calculateTrips()
 
 //add an eevengt listener to my button
 calculateButton.addEventListener("click", function () {
+    
     if (pointsInput.value === "") {
         errorMessage.innerHTML = "please enter points"
         setTimeout(function () {
@@ -28,8 +29,8 @@ calculateButton.addEventListener("click", function () {
         const checkedPeakButton = document.querySelector('input[name="peakTime"]:checked');
         const returnButton = document.querySelector('input[name="return"]:checked');
         if (checkedPeakButton) {
-            tripsFunction.setpricePerTrip(selectLocation.value, checkedPeakButton.value)
-            tripsFunction.setSingleTrips(130)
+            tripsFunction.setpricePerTrip(selectLocation.value,checkedPeakButton.value)
+            tripsFunction.setSingleTrips(pointsInput.value)
             singleTrips.innerHTML = tripsFunction.getSingleTrips()
             pricePerTrip.innerHTML = tripsFunction.getpricePerTrip()
 
@@ -48,6 +49,9 @@ calculateButton.addEventListener("click", function () {
                 errorMessage.innerHTML = '';
             }, 3500);
         }
-
+//remove the valuse after the calculate button is pressed
+        // pointsInput.value =""
+        // checkedPeakButton.checked = false
+        // selectLocation.value =""
     }
 })

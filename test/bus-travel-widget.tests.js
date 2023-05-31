@@ -37,7 +37,7 @@ describe('Calculate Trips function', function () {
     it('it should be able to get the number of single trips they can take depending on the points they have', function () {
         let tripsFunction = calculateTrips()
         tripsFunction.setpricePerTrip("Dunoon","peak")
-        tripsFunction.setSingleTrips(128)
+        tripsFunction.setSingleTrips(130)
         assert.equal(tripsFunction.getSingleTrips(), 4);
     });
     it('it should be able to get the number of return trips possible', function () {
